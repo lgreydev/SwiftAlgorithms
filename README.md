@@ -8,7 +8,7 @@ Read more about the package, and the intent behind it, in the [announcement on s
 
 ### Chain
 
-`chain(_:_:)`: Concatenates two collections with the same element type. 
+`chain(_:_:)`: Concatenates two collections with the same element type.<br>
 This operation is available for any two sequences by calling the `chain(_:_:)` function.
 
 ``` swift
@@ -24,7 +24,7 @@ let letters = chain("abcde", "FGHIJ")
 
 ### 🛡️ License
 
-This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/SwiftAlgorithms/blob/origin/License) file for details.
+This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/SwiftAlgorithms/blob/main/License) file for details.
 
 ### 🙏 Support
 
