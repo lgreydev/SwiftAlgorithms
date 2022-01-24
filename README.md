@@ -75,6 +75,26 @@ c.elementsEqual(c.chunked(...).joined())
 ```
 
 
+## Random Sampling
+
+Operations for randomly selecting `k` elements without replacement from a sequence or collection.
+
+Use these methods for sampling multiple elements from a collection, optionally maintaining the relative order of the elements. Each method has an overload that takes a `RandomNumberGenerator` as a parameter.
+
+``` swift
+
+var source = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+source.randomSample(count: 4)
+// e.g. [30, 10, 70, 50]
+source.randomStableSample(count: 4)
+// e.g. [20, 30, 80, 100]
+
+var rng = SplitMix64(seed: 0)
+source.randomSample(count: 4, using: &rng)
+
+```
+
 
 ### 🛡️ License
 

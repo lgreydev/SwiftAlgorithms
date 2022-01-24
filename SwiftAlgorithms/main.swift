@@ -50,9 +50,9 @@ let results = [
 let studentsByGrade = results.sorted { $0.grade < $1.grade}.chunked(on: \.grade)
 
 for (grade, students) in studentsByGrade {
-    print("Grade: \(grade)")
+//    print("Grade: \(grade)")
     for student in students {
-        print("\t\(student.name)")
+//        print("\t\(student.name)")
     }
 }
 
@@ -78,3 +78,14 @@ let evenly = names.chunks(ofCount: 2)
 
 let remaining = names.chunks(ofCount: 3)
 // equivalent to [["David", "Kyle", "Karoy"], ["Nate"]]
+
+// MARK: - Random Sampling
+// Operations for randomly selecting `k` elements without replacement from a sequence or collection.
+
+let lotteryBalls = 1...50
+let winningNumbers = lotteryBalls.randomSample(count: 7)
+// [45, 9, 40, 4, 39, 12, 32] // 7 elements, randomly selects
+
+let people = ["Steve", "Kitty", "Mike", "Json"]
+let selected = people.randomStableSample(count: 2)
+// ["Steve", "Mike"] // 2 elements, maintaining their relative order
