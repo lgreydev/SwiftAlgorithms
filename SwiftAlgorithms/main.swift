@@ -89,3 +89,15 @@ let winningNumbers = lotteryBalls.randomSample(count: 7)
 let people = ["Steve", "Kitty", "Mike", "Json"]
 let selected = people.randomStableSample(count: 2)
 // ["Steve", "Mike"] // 2 elements, maintaining their relative order
+
+// MARK: - Stride
+// Step over the elements of a sequence elements by a specified amount.
+
+let inputString = "a1b2c3d4e5"
+var letters2 = inputString.striding(by: 2)
+
+//letters2.forEach { print($0) }
+// a, b, c, d, e
+
+let evenNumbers = (0...10).striding(by: 2)
+//evenNumbers.forEach { print($0) } // == [0, 2, 4, 6, 8, 10]

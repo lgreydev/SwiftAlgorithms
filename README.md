@@ -4,9 +4,9 @@ Swift Algorithms is an open-source package of sequence and collection algorithms
 
 Read more about the package, and the intent behind it, in the [announcement on swift.org](https://swift.org/blog/swift-algorithms/).
 
-## Contents
 
-### Chain
+
+## Chain
 
 `chain(_:_:)`: Concatenates two collections with the same element type.<br>
 This operation is available for any two sequences by calling the `chain(_:_:)` function.
@@ -20,6 +20,7 @@ let letters = chain("abcde", "FGHIJ")
 // String(letters) == "abcdeFGHIJ"
 
 ```
+
 
 
 ## Chunked
@@ -75,6 +76,7 @@ c.elementsEqual(c.chunked(...).joined())
 ```
 
 
+
 ## Random Sampling
 
 Operations for randomly selecting `k` elements without replacement from a sequence or collection.
@@ -94,6 +96,22 @@ var rng = SplitMix64(seed: 0)
 source.randomSample(count: 4, using: &rng)
 
 ```
+
+
+
+## Stride
+
+Step over the elements of a sequence elements by a specified amount.
+
+This is available through the `striding(by:)` method on any `Sequence`.
+
+
+``` swift
+
+(0...10).striding(by: 2) // == [0, 2, 4, 6, 8, 10]
+
+```
+
 
 
 ### 🛡️ License
