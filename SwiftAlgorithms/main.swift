@@ -101,3 +101,39 @@ var letters2 = inputString.striding(by: 2)
 
 let evenNumbers = (0...10).striding(by: 2)
 //evenNumbers.forEach { print($0) } // == [0, 2, 4, 6, 8, 10]
+
+// MARK: - Unique
+// Methods to strip repeated elements from a sequence or collection.
+
+struct City {
+    let name: String
+    let country: String
+}
+
+let destinations = [
+    City(name: "Hamburg", country: "Germany"),
+    City(name: "Kyoto", country: "Japan"),
+    City(name: "Osaka", country: "Japan"),
+    City(name: "Naples", country: "Italy"),
+    City(name: "Rome", country: "Italy")
+]
+
+let selectedCities = destinations.uniqued(on: \.country)
+//selectedCities.forEach { print($0.name, $0.country) }
+//Hamburg Germany
+//Kyoto Japan
+//Naples Italy
+
+let cityAndCountry  = [
+    "Hamburg": "Germany",
+    "Kyoto": "Japan",
+    "Osaka": "Japan",
+    "Naples": "Italy",
+    "Rome": "Italy"
+]
+
+let selectedCities2 = cityAndCountry.uniqued(on: \.value)
+//selectedCities2.forEach { print($0.key, $0.value) }
+//Hamburg Germany
+//Kyoto Japan
+//Naples Italy

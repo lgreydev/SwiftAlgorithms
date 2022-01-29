@@ -113,6 +113,40 @@ This is available through the `striding(by:)` method on any `Sequence`.
 ```
 
 
+## Unique
+
+Methods to strip repeated elements from a sequence or collection.
+
+The `uniqued()` method returns a sequence, dropping duplicate elements from a sequence. The `uniqued(on:)` method does the same, using the result of the given closure to determine the "uniqueness" of each element.
+
+``` swift
+
+let numbers = [1, 2, 3, 3, 2, 3, 3, 2, 2, 2, 1]
+
+let unique = numbers.uniqued()
+// Array(unique) == [1, 2, 3]
+
+```
+
+``` swift
+
+let cityAndCountry  = [
+    "Hamburg": "Germany",
+    "Kyoto": "Japan",
+    "Osaka": "Japan",
+    "Naples": "Italy",
+    "Rome": "Italy"
+]
+
+let selectedCities2 = cityAndCountry.uniqued(on: \.value)
+selectedCities2.forEach { print($0.key, $0.value) }
+//Hamburg Germany
+//Kyoto Japan
+//Naples Italy
+
+```
+
+
 
 ### 🛡️ License
 
