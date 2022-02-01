@@ -137,3 +137,11 @@ let selectedCities2 = cityAndCountry.uniqued(on: \.value)
 //Hamburg Germany
 //Kyoto Japan
 //Naples Italy
+
+// MARK: - Compacted
+// A convenience method that lazily flattens the nils out of a sequence or collection.
+
+let allNumbers = [30, nil, nil, 10, 22, nil]
+let safeNumbers = allNumbers.compacted().map { $0 }
+// safeNumbers == [30, 10, 22]
+

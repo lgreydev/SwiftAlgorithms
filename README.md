@@ -113,6 +113,7 @@ This is available through the `striding(by:)` method on any `Sequence`.
 ```
 
 
+
 ## Unique
 
 Methods to strip repeated elements from a sequence or collection.
@@ -143,6 +144,22 @@ selectedCities2.forEach { print($0.key, $0.value) }
 //Hamburg Germany
 //Kyoto Japan
 //Naples Italy
+
+```
+
+
+
+## Compacted
+
+ A convenience method that lazily flattens the `nil`s out of a sequence or collection.
+
+The new method matches one of the most common uses of `compactMap`, which is to only remove `nil`s without transforming the elements (e.g. `collection.lazy.compactMap { $0 }`).
+
+``` swift
+
+let array: [Int?] = [10, nil, 30, nil, 2, 3, nil, 5]
+let withNoNils = array.compacted()
+// Array(withNoNils) == [10, 30, 2, 3, 5]
 
 ```
 
