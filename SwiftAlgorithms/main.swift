@@ -145,3 +145,26 @@ let allNumbers = [30, nil, nil, 10, 22, nil]
 let safeNumbers = allNumbers.compacted().map { $0 }
 // safeNumbers == [30, 10, 22]
 
+// MARK: - Product
+// A function for iterating over every pair of elements in two different collections.
+
+let friends = ["Steve", "Kitty", "Mike", "Json"]
+let games = ["Dota", "CS", "Wow"]
+
+let allOptions = product(friends, games)
+
+// allOptions.forEach { print($0.0, $0.1) }
+// Steve Dota, Steve CS, Steve Wow
+// Kitty Dota, Kitty CS, Kitty Wow
+// Mike Dota, Mike CS, Mike Wow
+// Json Dota, Json CS, Json Wow
+
+let range = 1...10
+let allMultiples = product(range, range)
+
+//allMultiples.forEach { print("\($0.0)x\($0.1) = \($0.0 * $0.1)") }
+//1x1 = 1
+//1x2 = 2
+//...
+//10x9 = 90
+//10x10 = 100

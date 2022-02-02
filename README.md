@@ -165,6 +165,38 @@ let withNoNils = array.compacted()
 
 
 
+## Product
+
+A function for iterating over every pair of elements in two different collections.
+
+``` swift
+
+let seasons = ["winter", "spring", "summer", "fall"]
+for (year, season) in product(1900...2020, seasons) {
+    // ...
+}
+
+// Is equivalent to:
+for years in 1900...2020 {
+    for season in seasons {
+        // ...
+    }
+}
+
+// winter 1900
+// spring 1900
+// summer 1900
+// fall 1900
+...
+// winter 2020
+// spring 2020
+// summer 2020
+// fall 2020
+
+```
+
+
+
 ### 🛡️ License
 
 This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/SwiftAlgorithms/blob/main/License) file for details.
