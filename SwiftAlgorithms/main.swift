@@ -168,3 +168,17 @@ let allMultiples = product(range, range)
 //...
 //10x9 = 90
 //10x10 = 100
+
+// MARK: - AdjacentPairs
+// Lazily iterates over tuples of adjacent elements.
+
+let numbersPairs = (1...10).adjacentPairs()
+
+var arrayPairs: [String] = []
+
+numbersPairs.forEach { p1, p2 in
+    let pair = "\(p1) and \(p2)"
+    arrayPairs.append(pair)
+}
+
+// arrayPairs == ["1 and 2", "2 and 3", "3 and 4", "4 and 5", "5 and 6", "6 and 7", "7 and 8", "8 and 9", "9 and 10"]

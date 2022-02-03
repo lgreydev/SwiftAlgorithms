@@ -197,6 +197,22 @@ for years in 1900...2020 {
 
 
 
+## AdjacentPairs
+
+Lazily iterates over tuples of adjacent elements.
+
+This operation is available for any sequence by calling the `adjacentPairs()` method.
+
+``` swift
+
+let numbers = (1...5)
+let pairs = numbers.adjacentPairs()
+// Array(pairs) == [(1, 2), (2, 3), (3, 4), (4, 5)]
+
+```
+
+
+
 ### 🛡️ License
 
 This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/SwiftAlgorithms/blob/main/License) file for details.
