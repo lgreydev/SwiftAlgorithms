@@ -213,6 +213,23 @@ let pairs = numbers.adjacentPairs()
 
 
 
+## Windows
+
+Break a collection into overlapping subsequences where elements are slices from the original collection.
+
+The `windows(ofCount:)` method takes a size as a parameter and returns a collection of subsequences. Each element of the returned collection is a successive overlapping slice of the given size.
+
+``` swift
+
+let swift = "swift"
+
+let windowed = swift.windows(ofCount: 2) 
+// Array(windowed) == [ "sw", "wi", "if", "ft" ]
+
+```
+
+
+
 ### 🛡️ License
 
 This project is licensed under the MIT License - see the [`LICENSE`](https://github.com/lgreydev/SwiftAlgorithms/blob/main/License) file for details.

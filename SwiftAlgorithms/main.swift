@@ -182,3 +182,17 @@ numbersPairs.forEach { p1, p2 in
 }
 
 // arrayPairs == ["1 and 2", "2 and 3", "3 and 4", "4 and 5", "5 and 6", "6 and 7", "7 and 8", "8 and 9", "9 and 10"]
+
+// MARK: - Windows
+// Break a collection into overlapping subsequences where elements are slices from the original collection.
+
+let sequence = (1...6).windows(ofCount: 3)
+
+var array: [[String]] = []
+
+sequence.forEach { value in
+    let element = value.map(String.init)
+    array.append(element)
+}
+
+// array == [["1", "2", "3"], ["2", "3", "4"], ["3", "4", "5"], ["4", "5", "6"]]
